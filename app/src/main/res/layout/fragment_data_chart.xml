@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- buttons to filter data -->
+    <Button
+        android:id="@+id/button_past_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Past Day"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/button_past_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Past Week"
+        android:layout_marginBottom="16dp" />
+
+    <!-- line chart to display data -->
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/line_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

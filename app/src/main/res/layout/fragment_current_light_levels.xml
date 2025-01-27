@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:gravity="center">
+
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Real-time Light Sensor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Display light level -->
+    <TextView
+        android:id="@+id/light_level_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Light Level: "
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Display location coordinates -->
+    <TextView
+        android:id="@+id/location_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location: "
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Display area name -->
+    <TextView
+        android:id="@+id/area_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Display cloud cover and time -->
+    <TextView
+        android:id="@+id/cloud_cover_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cloud Cover: "
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Display average light level -->
+    <TextView
+        android:id="@+id/average_light_level_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Average light level for area: "
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center" />
+
+</LinearLayout>

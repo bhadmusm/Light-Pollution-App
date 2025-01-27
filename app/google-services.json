@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "405862272569",
+    "project_id": "light-pollution-app",
+    "storage_bucket": "light-pollution-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405862272569:android:985a6f93ed666c2d1e47e8",
+        "android_client_info": {
+          "package_name": "com.example.lightsensorlogger_2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQ5RmtpmSV5ki2R7gRangqPRDxzgBOFuc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Title Text -->
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/home_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to the Light Pollution App!"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/home_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This app helps you measure light levels and related data in real-time to understand and analyze light pollution in your environment."
+            android:textSize="16sp"
+            android:paddingBottom="16dp"
+             />
+
+        <!-- New Image -->
+        <ImageView
+            android:id="@+id/additional_image"
+            android:layout_width="357dp"
+            android:layout_height="269dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:contentDescription="Additional Image"
+            android:src="@drawable/picc" />
+
+        <TextView
+            android:id="@+id/light_level_info_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ⓘ Light Level Ranges and Typical Scenarios:"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:paddingBottom="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Placeholder TextView for dynamic content -->
+        <LinearLayout
+            android:id="@+id/light_level_info_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="5dp" />
+
+
+
+        <!-- Existing Symbol -->
+        <ImageView
+            android:id="@+id/home_icon"
+            android:layout_width="54dp"
+            android:layout_height="51dp"
+            android:layout_gravity="center"
+            android:contentDescription="App Icon"
+            android:paddingTop="5dp"
+            android:src="@android:drawable/ic_menu_compass" />
+
+    </LinearLayout>
+</ScrollView>

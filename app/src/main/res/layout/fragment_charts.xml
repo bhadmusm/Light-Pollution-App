@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Realtime Light Data Charts"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- button to show Light Sensor Data Chart -->
+    <Button
+        android:id="@+id/button_light_sensor_chart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Real-time Light Sensor Data Chart" />
+
+    <!-- button to show Open Data Chart -->
+    <Button
+        android:id="@+id/button_open_data_chart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Real-time Chart for other locations"
+        android:layout_marginTop="16dp" />
+
+    <!-- button to filter data for Past Day -->
+    <Button
+        android:id="@+id/button_past_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Past Day"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/teal_700" />
+
+
+    <!-- button to filter data for Past Week -->
+    <Button
+        android:id="@+id/button_past_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Past Week"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/teal_700" />
+
+    <!-- Line chart to display data -->
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/line_chart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+    <!-- TextView to display current location -->
+    <TextView
+        android:id="@+id/text_current_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Location: "
+        android:layout_marginTop="16dp"
+        android:visibility="gone" />
+
+
+</LinearLayout>

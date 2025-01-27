@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Light Pollution Monitor</string>
+    <string name="ambient_light_level">Ambient Light Level</string>
+</resources>

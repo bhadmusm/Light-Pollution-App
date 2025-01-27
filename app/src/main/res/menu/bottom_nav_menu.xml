@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:id="@+id/nav_current_light_levels"
+        android:title="Realtime Stats"
+        android:icon="@drawable/ic_light"/>
+    <item
+        android:id="@+id/nav_export_csv"
+        android:title="Export CSV"
+        android:icon="@drawable/ic_export"/>
+    <item
+        android:id="@+id/nav_charts"
+        android:title="Charts"
+        android:icon="@drawable/ic_charts"/>
+
+    <item
+        android:id="@+id/nav_map"
+        android:icon="@drawable/ic_map"
+        android:title="Map" />
+</menu>

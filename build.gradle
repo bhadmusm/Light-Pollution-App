@@ -1,0 +1,21 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google() // For Google services and other dependencies
+        maven { url 'https://jitpack.io' }
+        mavenCentral() // For libraries available on Maven Central
+
+    }
+    dependencies {
+        // Add the Google Services classpath
+        classpath libs.google.services  // Use the latest version
+    }
+}
+
+plugins {
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.kotlin.compose) apply false
+    id 'com.google.gms.google-services' version '4.4.2' apply false
+}

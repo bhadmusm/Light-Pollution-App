@@ -1,0 +1,769 @@
+[debug] [2024-11-26T03:34:52.555Z] ----------------------------------------------------------------------
+[debug] [2024-11-26T03:34:52.567Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2024-11-26T03:34:52.568Z] CLI Version:   13.27.0
+[debug] [2024-11-26T03:34:52.568Z] Platform:      win32
+[debug] [2024-11-26T03:34:52.568Z] Node Version:  v22.11.0
+[debug] [2024-11-26T03:34:52.569Z] Time:          Tue Nov 26 2024 03:34:52 GMT+0000 (Greenwich Mean Time)
+[debug] [2024-11-26T03:34:52.569Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-26T03:34:52.654Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-26T03:34:52.654Z] > authorizing via signed-in user (maryambhadmus64@gmail.com)
+[debug] [2024-11-26T03:34:52.654Z] [iam] checking project light-pollution-app for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-11-26T03:34:52.656Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:34:52.656Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:34:52.657Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app:testIamPermissions [none]
+[debug] [2024-11-26T03:34:52.657Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app:testIamPermissions x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:34:52.657Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-11-26T03:34:52.981Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app:testIamPermissions 200
+[debug] [2024-11-26T03:34:52.981Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-11-26T03:34:52.982Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:34:52.982Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:34:52.982Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/light-pollution-app/serviceAccounts/light-pollution-app@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-11-26T03:34:52.982Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/light-pollution-app/serviceAccounts/light-pollution-app@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-11-26T03:34:53.194Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/light-pollution-app/serviceAccounts/light-pollution-app@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-11-26T03:34:53.195Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/light-pollution-app/serviceAccounts/light-pollution-app@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'light-pollution-app'...
+[info] 
+[info] i  deploying functions 
+[debug] [2024-11-26T03:34:53.202Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:34:53.203Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:34:53.203Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app [none]
+[debug] [2024-11-26T03:34:53.509Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app 200
+[debug] [2024-11-26T03:34:53.509Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app {"projectNumber":"405862272569","projectId":"light-pollution-app","lifecycleState":"ACTIVE","name":"light pollution app","labels":{"firebase":"enabled"},"createTime":"2024-10-28T16:21:35.213751Z"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2024-11-26T03:34:53.516Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:34:53.516Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:34:53.517Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:34:53.517Z] Checked if tokens are valid: true, expires at: 1732594857857
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2024-11-26T03:34:53.518Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:34:53.518Z] Checked if tokens are valid: true, expires at: 1732594857857
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-11-26T03:34:53.519Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:34:53.519Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:34:53.520Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-11-26T03:34:53.520Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:34:53.522Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-11-26T03:34:53.523Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:34:53.525Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/cloudbuild.googleapis.com [none]
+[debug] [2024-11-26T03:34:53.526Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/cloudbuild.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:34:53.528Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/artifactregistry.googleapis.com [none]
+[debug] [2024-11-26T03:34:53.528Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/artifactregistry.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:34:54.372Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/artifactregistry.googleapis.com 200
+[debug] [2024-11-26T03:34:54.373Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-11-26T03:34:54.376Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/runtimeconfig.googleapis.com 200
+[debug] [2024-11-26T03:34:54.376Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-11-26T03:34:54.390Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/cloudbuild.googleapis.com 200
+[debug] [2024-11-26T03:34:54.390Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-11-26T03:34:54.412Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/cloudfunctions.googleapis.com 200
+[debug] [2024-11-26T03:34:54.412Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-11-26T03:34:54.412Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:34:54.413Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:34:54.413Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/light-pollution-app/adminSdkConfig [none]
+[debug] [2024-11-26T03:34:54.689Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/light-pollution-app/adminSdkConfig 200
+[debug] [2024-11-26T03:34:54.689Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/light-pollution-app/adminSdkConfig {"projectId":"light-pollution-app","databaseURL":"https://light-pollution-app-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"light-pollution-app.firebasestorage.app"}
+[debug] [2024-11-26T03:34:54.690Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:34:54.690Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:34:54.690Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/light-pollution-app/configs [none]
+[debug] [2024-11-26T03:34:55.463Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/light-pollution-app/configs 200
+[debug] [2024-11-26T03:34:55.463Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/light-pollution-app/configs {}
+[debug] [2024-11-26T03:34:55.466Z] Validating nodejs source
+[debug] [2024-11-26T03:34:57.125Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "ngeohash": "^0.6.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-11-26T03:34:57.125Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2024-11-26T03:34:57.126Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-26T03:34:57.137Z] Found firebase-functions binary at 'C:\Users\Dell\AndroidStudioProjects\LightSensorLogger_2\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8288
+
+[debug] [2024-11-26T03:34:57.610Z] Got response from /__/functions.yaml {"endpoints":{"aggregateSensorData":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"eventTrigger":{"eventType":"google.firebase.database.ref.v1.created","eventFilters":{},"eventFilterPathPatterns":{"ref":"light_sensor_data/{pushId}","instance":"*"},"retry":false},"entryPoint":"aggregateSensorData"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2024-11-26T03:35:01.647Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:01.647Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:01.647Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/firebaseextensions.googleapis.com [none]
+[debug] [2024-11-26T03:35:01.648Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:35:02.496Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/firebaseextensions.googleapis.com 200
+[debug] [2024-11-26T03:35:02.496Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/firebaseextensions.googleapis.com [omitted]
+[warn] !  extensions: missing required API firebaseextensions.googleapis.com. Enabling now... 
+[debug] [2024-11-26T03:35:02.496Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:02.496Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:02.497Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/firebaseextensions.googleapis.com:enable [none]
+[debug] [2024-11-26T03:35:02.497Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/firebaseextensions.googleapis.com:enable x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:35:03.559Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/firebaseextensions.googleapis.com:enable 200
+[debug] [2024-11-26T03:35:03.560Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/firebaseextensions.googleapis.com:enable [omitted]
+[debug] [2024-11-26T03:35:13.572Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:13.574Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:13.575Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/firebaseextensions.googleapis.com [none]
+[debug] [2024-11-26T03:35:13.575Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:35:14.466Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/firebaseextensions.googleapis.com 200
+[debug] [2024-11-26T03:35:14.466Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/firebaseextensions.googleapis.com [omitted]
+[info] +  extensions: required API firebaseextensions.googleapis.com is enabled 
+[debug] [2024-11-26T03:35:14.473Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-26T03:35:14.473Z] > authorizing via signed-in user (maryambhadmus64@gmail.com)
+[debug] [2024-11-26T03:35:14.474Z] [iam] checking project light-pollution-app for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2024-11-26T03:35:14.474Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:14.474Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:14.474Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app:testIamPermissions [none]
+[debug] [2024-11-26T03:35:14.474Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app:testIamPermissions x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:35:14.474Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2024-11-26T03:35:14.639Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app:testIamPermissions 200
+[debug] [2024-11-26T03:35:14.639Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2024-11-26T03:35:14.640Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:14.640Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:14.642Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/light-pollution-app/instances pageSize=100&pageToken=
+[debug] [2024-11-26T03:35:16.788Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/light-pollution-app/instances 200
+[debug] [2024-11-26T03:35:16.789Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/light-pollution-app/instances {}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged C:\Users\Dell\AndroidStudioProjects\LightSensorLogger_2\functions (61.82 KB) for uploading 
+[debug] [2024-11-26T03:35:16.844Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:16.845Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:16.845Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/light-pollution-app/locations/-/functions [none]
+[debug] [2024-11-26T03:35:17.422Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/light-pollution-app/locations/-/functions 200
+[debug] [2024-11-26T03:35:17.422Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/light-pollution-app/locations/-/functions {}
+[debug] [2024-11-26T03:35:17.423Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:17.423Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:17.424Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2024-11-26T03:35:18.415Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/-/functions 200
+[debug] [2024-11-26T03:35:18.416Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/-/functions {}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[debug] [2024-11-26T03:35:18.423Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:18.424Z] Checked if tokens are valid: true, expires at: 1732594857857
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[debug] [2024-11-26T03:35:18.425Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:18.425Z] Checked if tokens are valid: true, expires at: 1732594857857
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[debug] [2024-11-26T03:35:18.426Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:18.426Z] Checked if tokens are valid: true, expires at: 1732594857857
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2024-11-26T03:35:18.426Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:18.426Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:18.426Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/run.googleapis.com [none]
+[debug] [2024-11-26T03:35:18.426Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/run.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:35:18.427Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/eventarc.googleapis.com [none]
+[debug] [2024-11-26T03:35:18.427Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/eventarc.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:35:18.430Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/pubsub.googleapis.com [none]
+[debug] [2024-11-26T03:35:18.430Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/pubsub.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:35:18.433Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/storage.googleapis.com [none]
+[debug] [2024-11-26T03:35:18.433Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/storage.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:35:18.802Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/run.googleapis.com 200
+[debug] [2024-11-26T03:35:18.802Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/run.googleapis.com [omitted]
+[warn] !  functions: missing required API run.googleapis.com. Enabling now... 
+[debug] [2024-11-26T03:35:18.802Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:18.802Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:18.802Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/run.googleapis.com:enable [none]
+[debug] [2024-11-26T03:35:18.802Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/run.googleapis.com:enable x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:35:19.247Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/pubsub.googleapis.com 200
+[debug] [2024-11-26T03:35:19.247Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2024-11-26T03:35:19.263Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/eventarc.googleapis.com 200
+[debug] [2024-11-26T03:35:19.264Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/eventarc.googleapis.com [omitted]
+[warn] !  functions: missing required API eventarc.googleapis.com. Enabling now... 
+[debug] [2024-11-26T03:35:19.265Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:19.265Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:19.265Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/eventarc.googleapis.com:enable [none]
+[debug] [2024-11-26T03:35:19.265Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/eventarc.googleapis.com:enable x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:35:19.281Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/storage.googleapis.com 200
+[debug] [2024-11-26T03:35:19.282Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[debug] [2024-11-26T03:35:19.537Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/run.googleapis.com:enable 200
+[debug] [2024-11-26T03:35:19.537Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/run.googleapis.com:enable [omitted]
+[debug] [2024-11-26T03:35:19.944Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/eventarc.googleapis.com:enable 200
+[debug] [2024-11-26T03:35:19.945Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/eventarc.googleapis.com:enable [omitted]
+[debug] [2024-11-26T03:35:29.549Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:29.549Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:29.549Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/run.googleapis.com [none]
+[debug] [2024-11-26T03:35:29.549Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/run.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:35:29.952Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:29.953Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:29.953Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/eventarc.googleapis.com [none]
+[debug] [2024-11-26T03:35:29.953Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/eventarc.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:35:30.432Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/run.googleapis.com 200
+[debug] [2024-11-26T03:35:30.433Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/run.googleapis.com [omitted]
+[info] +  functions: required API run.googleapis.com is enabled 
+[debug] [2024-11-26T03:35:30.793Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/eventarc.googleapis.com 200
+[debug] [2024-11-26T03:35:30.793Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/eventarc.googleapis.com [omitted]
+[info] +  functions: required API eventarc.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2024-11-26T03:35:30.795Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:30.795Z] Checked if tokens are valid: true, expires at: 1732594857857
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2024-11-26T03:35:30.795Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:30.795Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:30.795Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/405862272569/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-11-26T03:35:30.796Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/405862272569/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-11-26T03:35:31.521Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/405862272569/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2024-11-26T03:35:31.521Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/405862272569/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-405862272569@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"111702665091816647340"}}
+[debug] [2024-11-26T03:35:31.847Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/405862272569/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2024-11-26T03:35:31.847Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/405862272569/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-405862272569@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"107298240107554209612"}}
+[debug] [2024-11-26T03:35:31.848Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:31.849Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:31.849Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/405862272569:getIamPolicy [none]
+[debug] [2024-11-26T03:35:32.131Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/405862272569:getIamPolicy 200
+[debug] [2024-11-26T03:35:32.131Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/405862272569:getIamPolicy {"version":1,"etag":"BwYnyInqadA=","bindings":[{"role":"roles/cloudbuild.builds.builder","members":["serviceAccount:405862272569@cloudbuild.gserviceaccount.com"]},{"role":"roles/cloudbuild.serviceAgent","members":["serviceAccount:service-405862272569@gcp-sa-cloudbuild.iam.gserviceaccount.com"]},{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-405862272569@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-405862272569@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:405862272569@cloudservices.gserviceaccount.com","serviceAccount:light-pollution-app@appspot.gserviceaccount.com","serviceAccount:405862272569-compute@developer.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-405862272569@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-l7mqz@light-pollution-app.iam.gserviceaccount.com"]},{"role":"roles/firebasedatabase.admin","members":["serviceAccount:firebase-adminsdk-l7mqz@light-pollution-app.iam.gserviceaccount.com"]},{"role":"roles/firebasemods.serviceAgent","members":["serviceAccount:service-405862272569@gcp-sa-firebasemods.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-l7mqz@light-pollution-app.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:maryambhadmus64@gmail.com"]},{"role":"roles/run.serviceAgent","members":["serviceAccount:service-405862272569@serverless-robot-prod.iam.gserviceaccount.com"]}]}
+[debug] [2024-11-26T03:35:32.132Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:32.132Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:32.132Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/405862272569:setIamPolicy [none]
+[debug] [2024-11-26T03:35:32.132Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/405862272569:setIamPolicy {"policy":{"version":1,"etag":"BwYnyInqadA=","bindings":[{"role":"roles/cloudbuild.builds.builder","members":["serviceAccount:405862272569@cloudbuild.gserviceaccount.com"]},{"role":"roles/cloudbuild.serviceAgent","members":["serviceAccount:service-405862272569@gcp-sa-cloudbuild.iam.gserviceaccount.com"]},{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-405862272569@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-405862272569@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:405862272569@cloudservices.gserviceaccount.com","serviceAccount:light-pollution-app@appspot.gserviceaccount.com","serviceAccount:405862272569-compute@developer.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-405862272569@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-l7mqz@light-pollution-app.iam.gserviceaccount.com"]},{"role":"roles/firebasedatabase.admin","members":["serviceAccount:firebase-adminsdk-l7mqz@light-pollution-app.iam.gserviceaccount.com"]},{"role":"roles/firebasemods.serviceAgent","members":["serviceAccount:service-405862272569@gcp-sa-firebasemods.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-l7mqz@light-pollution-app.iam.gserviceaccount.com","serviceAccount:service-405862272569@gcp-sa-pubsub.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:maryambhadmus64@gmail.com"]},{"role":"roles/run.serviceAgent","members":["serviceAccount:service-405862272569@serverless-robot-prod.iam.gserviceaccount.com"]},{"role":"roles/run.invoker","members":["serviceAccount:405862272569-compute@developer.gserviceaccount.com"]},{"role":"roles/eventarc.eventReceiver","members":["serviceAccount:405862272569-compute@developer.gserviceaccount.com"]}]},"updateMask":"bindings"}
+[debug] [2024-11-26T03:35:33.396Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/405862272569:setIamPolicy 200
+[debug] [2024-11-26T03:35:33.396Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/405862272569:setIamPolicy {"version":1,"etag":"BwYnyIqXiII=","bindings":[{"role":"roles/cloudbuild.builds.builder","members":["serviceAccount:405862272569@cloudbuild.gserviceaccount.com"]},{"role":"roles/cloudbuild.serviceAgent","members":["serviceAccount:service-405862272569@gcp-sa-cloudbuild.iam.gserviceaccount.com"]},{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-405862272569@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-405862272569@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:405862272569-compute@developer.gserviceaccount.com","serviceAccount:405862272569@cloudservices.gserviceaccount.com","serviceAccount:light-pollution-app@appspot.gserviceaccount.com"]},{"role":"roles/eventarc.eventReceiver","members":["serviceAccount:405862272569-compute@developer.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-405862272569@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-l7mqz@light-pollution-app.iam.gserviceaccount.com"]},{"role":"roles/firebasedatabase.admin","members":["serviceAccount:firebase-adminsdk-l7mqz@light-pollution-app.iam.gserviceaccount.com"]},{"role":"roles/firebasemods.serviceAgent","members":["serviceAccount:service-405862272569@gcp-sa-firebasemods.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-l7mqz@light-pollution-app.iam.gserviceaccount.com","serviceAccount:service-405862272569@gcp-sa-pubsub.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:maryambhadmus64@gmail.com"]},{"role":"roles/run.invoker","members":["serviceAccount:405862272569-compute@developer.gserviceaccount.com"]},{"role":"roles/run.serviceAgent","members":["serviceAccount:service-405862272569@serverless-robot-prod.iam.gserviceaccount.com"]}]}
+[debug] [2024-11-26T03:35:33.397Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:33.397Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:33.397Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app [none]
+[debug] [2024-11-26T03:35:33.576Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app 200
+[debug] [2024-11-26T03:35:33.577Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app {"projectNumber":"405862272569","projectId":"light-pollution-app","lifecycleState":"ACTIVE","name":"light pollution app","labels":{"firebase":"enabled"},"createTime":"2024-10-28T16:21:35.213751Z"}
+[debug] [2024-11-26T03:35:33.578Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:33.578Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:33.578Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/light-pollution-app/billingInfo [none]
+[debug] [2024-11-26T03:35:34.313Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/light-pollution-app/billingInfo 200
+[debug] [2024-11-26T03:35:34.313Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/light-pollution-app/billingInfo {"name":"projects/light-pollution-app/billingInfo","projectId":"light-pollution-app","billingAccountName":"billingAccounts/0108AB-89CA52-235143","billingEnabled":true}
+[debug] [2024-11-26T03:35:34.315Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:34.315Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:34.315Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2024-11-26T03:35:36.049Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2024-11-26T03:35:36.050Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-405862272569.us-central1.cloudfunctions.appspot.com/238c8a14-2c67-4a1f-b186-8661a06e611b.zip?GoogleAccessId=service-405862272569@gcf-admin-robot.iam.gserviceaccount.com&Expires=1732593935&Signature=3ERMEXXSolYN3xjfP4B7p2Cjzh%2BSNf4NCQ6f%2BRaQY7hRyCesxkqUlEyf5%2BMIPVeq0PblmLE6otCNFBHF%2BFk%2BBH5egIytyC9TGv9BlVeoLcPf9PkAuV8Bbo%2FCd1i5G600QfhDLNLoe7sHxChy3buTRMI0Vn%2Fo6tTm65KT8BaqEoNPcyEj5GIHTn1J0RaegfuduRzQUqgt60QsZ9I3uIXjamDCeWe1VbELM4sGCpJS0lkA4Ovd6rJy2eLjWvKAmFaKlxUF2nRKQ18JUnV6PkKfH05CjDmei0Gh7mauVE5iPbBlCRNA%2BOW7t4QLrxCW5ET8p7%2BorJLpXbBLufy5N7WYPA%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-405862272569.us-central1.cloudfunctions.appspot.com","object":"238c8a14-2c67-4a1f-b186-8661a06e611b.zip"}}
+[debug] [2024-11-26T03:35:36.050Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-405862272569.us-central1.cloudfunctions.appspot.com/238c8a14-2c67-4a1f-b186-8661a06e611b.zip GoogleAccessId=service-405862272569%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1732593935&Signature=3ERMEXXSolYN3xjfP4B7p2Cjzh%2BSNf4NCQ6f%2BRaQY7hRyCesxkqUlEyf5%2BMIPVeq0PblmLE6otCNFBHF%2BFk%2BBH5egIytyC9TGv9BlVeoLcPf9PkAuV8Bbo%2FCd1i5G600QfhDLNLoe7sHxChy3buTRMI0Vn%2Fo6tTm65KT8BaqEoNPcyEj5GIHTn1J0RaegfuduRzQUqgt60QsZ9I3uIXjamDCeWe1VbELM4sGCpJS0lkA4Ovd6rJy2eLjWvKAmFaKlxUF2nRKQ18JUnV6PkKfH05CjDmei0Gh7mauVE5iPbBlCRNA%2BOW7t4QLrxCW5ET8p7%2BorJLpXbBLufy5N7WYPA%3D%3D
+[debug] [2024-11-26T03:35:36.050Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-405862272569.us-central1.cloudfunctions.appspot.com/238c8a14-2c67-4a1f-b186-8661a06e611b.zip [stream]
+[debug] [2024-11-26T03:35:36.497Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-405862272569.us-central1.cloudfunctions.appspot.com/238c8a14-2c67-4a1f-b186-8661a06e611b.zip 200
+[debug] [2024-11-26T03:35:36.497Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-405862272569.us-central1.cloudfunctions.appspot.com/238c8a14-2c67-4a1f-b186-8661a06e611b.zip [omitted]
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 18 (2nd Gen) function aggregateSensorData(us-central1)... 
+[debug] [2024-11-26T03:35:36.502Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:36.502Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:36.502Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/us-central1/functions functionId=aggregateSensorData
+[debug] [2024-11-26T03:35:36.502Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/us-central1/functions {"name":"projects/light-pollution-app/locations/us-central1/functions/aggregateSensorData","buildConfig":{"runtime":"nodejs18","entryPoint":"aggregateSensorData","source":{"storageSource":{"bucket":"gcf-v2-uploads-405862272569.us-central1.cloudfunctions.appspot.com","object":"238c8a14-2c67-4a1f-b186-8661a06e611b.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"light-pollution-app\",\"databaseURL\":\"https://light-pollution-app-default-rtdb.europe-west1.firebasedatabase.app\",\"storageBucket\":\"light-pollution-app.firebasestorage.app\"}","GCLOUD_PROJECT":"light-pollution-app","EVENTARC_CLOUD_EVENT_SOURCE":"projects/light-pollution-app/locations/us-central1/services/aggregateSensorData","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"aggregateSensorData"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"bcdc65b4ba8c1b5952ffce33eb46aeb564817b4a"},"eventTrigger":{"eventType":"google.firebase.database.ref.v1.created","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY","eventFilters":[{"attribute":"ref","value":"light_sensor_data/{pushId}","operator":"match-path-pattern"},{"attribute":"instance","value":"*","operator":"match-path-pattern"}],"triggerRegion":"us-central1"}}
+[debug] [2024-11-26T03:35:40.543Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/us-central1/functions 400
+[debug] [2024-11-26T03:35:40.543Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/us-central1/functions {"error":{"code":400,"message":"Validation failed for trigger projects/light-pollution-app/locations/us-central1/triggers/aggregatesensordata-868318: The request was invalid: generic::not_found: pattern cannot match any databases in region us-central1: invalid argument","status":"INVALID_ARGUMENT"}}
+[warn] !  functions: Request to https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/us-central1/functions?functionId=aggregateSensorData had HTTP Error: 400, Validation failed for trigger projects/light-pollution-app/locations/us-central1/triggers/aggregatesensordata-868318: The request was invalid: generic::not_found: pattern cannot match any databases in region us-central1: invalid argument 
+[warn] !  functions:  failed to create function projects/light-pollution-app/locations/us-central1/functions/aggregateSensorData 
+[error] Failed to create function projects/light-pollution-app/locations/us-central1/functions/aggregateSensorData
+[debug] [2024-11-26T03:35:40.558Z] Total Function Deployment time: 4050
+[debug] [2024-11-26T03:35:40.559Z] 1 Functions Deployed
+[debug] [2024-11-26T03:35:40.559Z] 1 Functions Errored
+[debug] [2024-11-26T03:35:40.559Z] 0 Function Deployments Aborted
+[debug] [2024-11-26T03:35:40.559Z] Average Function Deployment time: 4048
+[info] 
+[info] Functions deploy had errors with the following functions:
+	aggregateSensorData(us-central1)
+[info] i  functions: cleaning up build files... 
+[debug] [2024-11-26T03:35:40.599Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:40.600Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:40.600Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:40.600Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:40.600Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/light-pollution-app/locations/us-central1/repositories/gcf-artifacts/packages/aggregate_sensor_data [none]
+[debug] [2024-11-26T03:35:40.601Z] >>> [apiv2][query] GET https://us.gcr.io/v2/light-pollution-app/gcf/us-central1/tags/list [none]
+[debug] [2024-11-26T03:35:41.379Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/light-pollution-app/locations/us-central1/repositories/gcf-artifacts/packages/aggregate_sensor_data 404
+[debug] [2024-11-26T03:35:41.379Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/light-pollution-app/locations/us-central1/repositories/gcf-artifacts/packages/aggregate_sensor_data {"error":{"code":404,"message":"Package \"projects/light-pollution-app/locations/us-central1/repositories/gcf-artifacts/packages/aggregate_sensor_data\" was not found.","status":"NOT_FOUND"}}
+[debug] [2024-11-26T03:35:41.694Z] <<< [apiv2][status] GET https://us.gcr.io/v2/light-pollution-app/gcf/us-central1/tags/list 404
+[debug] [2024-11-26T03:35:41.694Z] <<< [apiv2][body] GET https://us.gcr.io/v2/light-pollution-app/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-26T03:35:41.695Z] Failed docker command with error  Request to https://us.gcr.io/v2/light-pollution-app/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/light-pollution-app/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2024-11-26T03:35:41.702Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:41.702Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:41.702Z] >>> [apiv2][query] GET https://us.gcr.io/v2/light-pollution-app/gcf/us-central1/tags/list [none]
+[debug] [2024-11-26T03:35:41.914Z] <<< [apiv2][status] GET https://us.gcr.io/v2/light-pollution-app/gcf/us-central1/tags/list 404
+[debug] [2024-11-26T03:35:41.914Z] <<< [apiv2][body] GET https://us.gcr.io/v2/light-pollution-app/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-26T03:35:41.914Z] Failed docker command with error  Request to https://us.gcr.io/v2/light-pollution-app/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/light-pollution-app/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2024-11-26T03:35:42.027Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:42.027Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:35:42.027Z] >>> [apiv2][query] GET https://us.gcr.io/v2/light-pollution-app/gcf/us-central1/tags/list [none]
+[debug] [2024-11-26T03:35:42.227Z] <<< [apiv2][status] GET https://us.gcr.io/v2/light-pollution-app/gcf/us-central1/tags/list 404
+[debug] [2024-11-26T03:35:42.227Z] <<< [apiv2][body] GET https://us.gcr.io/v2/light-pollution-app/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-11-26T03:35:42.227Z] Failed docker command with error  Request to https://us.gcr.io/v2/light-pollution-app/gcf/us-central1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://us.gcr.io/v2/light-pollution-app/gcf/us-central1/tags/list had HTTP Error: 404, Not Found","status":404}
+[warn] !  functions: Unhandled error cleaning up build images. This could result in a small monthly bill if not corrected. You can attempt to delete these images by redeploying or you can delete them manually at https://console.cloud.google.com/gcr/images/light-pollution-app/us/gcf 
+[debug] [2024-11-26T03:35:42.227Z] Functions deploy failed.
+[debug] [2024-11-26T03:35:42.228Z] {
+  "endpoint": {
+    "id": "aggregateSensorData",
+    "project": "light-pollution-app",
+    "region": "us-central1",
+    "entryPoint": "aggregateSensorData",
+    "platform": "gcfv2",
+    "runtime": "nodejs18",
+    "eventTrigger": {
+      "eventType": "google.firebase.database.ref.v1.created",
+      "retry": false,
+      "eventFilters": {},
+      "eventFilterPathPatterns": {
+        "ref": "light_sensor_data/{pushId}",
+        "instance": "*"
+      },
+      "region": "us-central1"
+    },
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"light-pollution-app\",\"databaseURL\":\"https://light-pollution-app-default-rtdb.europe-west1.firebasedatabase.app\",\"storageBucket\":\"light-pollution-app.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "light-pollution-app",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/light-pollution-app/locations/us-central1/services/aggregateSensorData"
+    },
+    "codebase": "default",
+    "cpu": 1,
+    "targetedByOnly": false,
+    "hash": "bcdc65b4ba8c1b5952ffce33eb46aeb564817b4a"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/light-pollution-app/locations/us-central1/functions/aggregateSensorData"
+    },
+    "exit": 1,
+    "message": "Failed to create function projects/light-pollution-app/locations/us-central1/functions/aggregateSensorData",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Validation failed for trigger projects/light-pollution-app/locations/us-central1/triggers/aggregatesensordata-868318: The request was invalid: generic::not_found: pattern cannot match any databases in region us-central1: invalid argument",
+            "status": "INVALID_ARGUMENT"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "Request to https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/us-central1/functions?functionId=aggregateSensorData had HTTP Error: 400, Validation failed for trigger projects/light-pollution-app/locations/us-central1/triggers/aggregatesensordata-868318: The request was invalid: generic::not_found: pattern cannot match any databases in region us-central1: invalid argument",
+      "status": 400
+    },
+    "status": 400,
+    "code": 400
+  }
+}
+[debug] [2024-11-26T03:35:42.253Z] Error: Failed to create function aggregateSensorData in region us-central1
+    at C:\Users\Dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:294:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Fabricator.createV2Function (C:\Users\Dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:278:30)
+    at async Fabricator.createEndpoint (C:\Users\Dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:137:13)
+    at async handle (C:\Users\Dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:89:17)
+[error] 
+[error] Error: There was an error deploying functions
+[debug] [2024-11-26T03:38:45.830Z] ----------------------------------------------------------------------
+[debug] [2024-11-26T03:38:45.843Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2024-11-26T03:38:45.844Z] CLI Version:   13.27.0
+[debug] [2024-11-26T03:38:45.844Z] Platform:      win32
+[debug] [2024-11-26T03:38:45.844Z] Node Version:  v22.11.0
+[debug] [2024-11-26T03:38:45.845Z] Time:          Tue Nov 26 2024 03:38:45 GMT+0000 (Greenwich Mean Time)
+[debug] [2024-11-26T03:38:45.845Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-26T03:38:45.930Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-26T03:38:45.931Z] > authorizing via signed-in user (maryambhadmus64@gmail.com)
+[debug] [2024-11-26T03:38:45.931Z] [iam] checking project light-pollution-app for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-11-26T03:38:45.932Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:45.932Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:45.933Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app:testIamPermissions [none]
+[debug] [2024-11-26T03:38:45.933Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app:testIamPermissions x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:38:45.933Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-11-26T03:38:46.255Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app:testIamPermissions 200
+[debug] [2024-11-26T03:38:46.255Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-11-26T03:38:46.261Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:46.261Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:46.261Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/light-pollution-app/serviceAccounts/light-pollution-app@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-11-26T03:38:46.261Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/light-pollution-app/serviceAccounts/light-pollution-app@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-11-26T03:38:46.433Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/light-pollution-app/serviceAccounts/light-pollution-app@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-11-26T03:38:46.434Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/light-pollution-app/serviceAccounts/light-pollution-app@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'light-pollution-app'...
+[info] 
+[info] i  deploying functions 
+[debug] [2024-11-26T03:38:46.437Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:46.437Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:46.437Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app [none]
+[debug] [2024-11-26T03:38:46.773Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app 200
+[debug] [2024-11-26T03:38:46.774Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app {"projectNumber":"405862272569","projectId":"light-pollution-app","lifecycleState":"ACTIVE","name":"light pollution app","labels":{"firebase":"enabled"},"createTime":"2024-10-28T16:21:35.213751Z"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2024-11-26T03:38:46.779Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:46.779Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:46.780Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:46.780Z] Checked if tokens are valid: true, expires at: 1732594857857
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2024-11-26T03:38:46.781Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:46.781Z] Checked if tokens are valid: true, expires at: 1732594857857
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-11-26T03:38:46.782Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:46.782Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:46.783Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-11-26T03:38:46.783Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:38:46.786Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-11-26T03:38:46.786Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:38:46.788Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/cloudbuild.googleapis.com [none]
+[debug] [2024-11-26T03:38:46.788Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/cloudbuild.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:38:46.790Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/artifactregistry.googleapis.com [none]
+[debug] [2024-11-26T03:38:46.790Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/artifactregistry.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:38:47.786Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/runtimeconfig.googleapis.com 200
+[debug] [2024-11-26T03:38:47.787Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-11-26T03:38:47.795Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/cloudfunctions.googleapis.com 200
+[debug] [2024-11-26T03:38:47.795Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-11-26T03:38:47.798Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/cloudbuild.googleapis.com 200
+[debug] [2024-11-26T03:38:47.798Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-11-26T03:38:47.801Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/artifactregistry.googleapis.com 200
+[debug] [2024-11-26T03:38:47.801Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-11-26T03:38:47.802Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:47.802Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:47.802Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/light-pollution-app/adminSdkConfig [none]
+[debug] [2024-11-26T03:38:48.092Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/light-pollution-app/adminSdkConfig 200
+[debug] [2024-11-26T03:38:48.092Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/light-pollution-app/adminSdkConfig {"projectId":"light-pollution-app","databaseURL":"https://light-pollution-app-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"light-pollution-app.firebasestorage.app"}
+[debug] [2024-11-26T03:38:48.093Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:48.093Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:48.093Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/light-pollution-app/configs [none]
+[debug] [2024-11-26T03:38:48.878Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/light-pollution-app/configs 200
+[debug] [2024-11-26T03:38:48.879Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/light-pollution-app/configs {}
+[debug] [2024-11-26T03:38:48.883Z] Validating nodejs source
+[debug] [2024-11-26T03:38:50.846Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "ngeohash": "^0.6.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-11-26T03:38:50.846Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2024-11-26T03:38:50.847Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-11-26T03:38:50.858Z] Found firebase-functions binary at 'C:\Users\Dell\AndroidStudioProjects\LightSensorLogger_2\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8902
+
+[debug] [2024-11-26T03:38:51.450Z] Got response from /__/functions.yaml {"endpoints":{"aggregateSensorData":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["europe-west1"],"labels":{},"eventTrigger":{"eventType":"google.firebase.database.ref.v1.created","eventFilters":{},"eventFilterPathPatterns":{"ref":"light_sensor_data/{pushId}","instance":"*"},"retry":false},"entryPoint":"aggregateSensorData"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2024-11-26T03:38:55.507Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:55.507Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:55.507Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/firebaseextensions.googleapis.com [none]
+[debug] [2024-11-26T03:38:55.507Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:38:56.346Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/firebaseextensions.googleapis.com 200
+[debug] [2024-11-26T03:38:56.347Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/firebaseextensions.googleapis.com [omitted]
+[info] +  extensions: required API firebaseextensions.googleapis.com is enabled 
+[debug] [2024-11-26T03:38:56.348Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-26T03:38:56.349Z] > authorizing via signed-in user (maryambhadmus64@gmail.com)
+[debug] [2024-11-26T03:38:56.349Z] [iam] checking project light-pollution-app for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2024-11-26T03:38:56.350Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:56.350Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:56.350Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app:testIamPermissions [none]
+[debug] [2024-11-26T03:38:56.350Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app:testIamPermissions x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:38:56.351Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2024-11-26T03:38:56.520Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app:testIamPermissions 200
+[debug] [2024-11-26T03:38:56.520Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2024-11-26T03:38:56.522Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:56.522Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:56.522Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/light-pollution-app/instances pageSize=100&pageToken=
+[debug] [2024-11-26T03:38:57.418Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/light-pollution-app/instances 200
+[debug] [2024-11-26T03:38:57.419Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/light-pollution-app/instances {}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged C:\Users\Dell\AndroidStudioProjects\LightSensorLogger_2\functions (61.88 KB) for uploading 
+[debug] [2024-11-26T03:38:57.467Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:57.467Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:57.467Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/light-pollution-app/locations/-/functions [none]
+[debug] [2024-11-26T03:38:58.079Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/light-pollution-app/locations/-/functions 200
+[debug] [2024-11-26T03:38:58.079Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/light-pollution-app/locations/-/functions {}
+[debug] [2024-11-26T03:38:58.079Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:58.079Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:58.079Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2024-11-26T03:38:59.049Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/-/functions 200
+[debug] [2024-11-26T03:38:59.049Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/-/functions {}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[debug] [2024-11-26T03:38:59.052Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:59.052Z] Checked if tokens are valid: true, expires at: 1732594857857
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[debug] [2024-11-26T03:38:59.052Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:59.052Z] Checked if tokens are valid: true, expires at: 1732594857857
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[debug] [2024-11-26T03:38:59.053Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:59.053Z] Checked if tokens are valid: true, expires at: 1732594857857
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2024-11-26T03:38:59.053Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:59.053Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:59.053Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/run.googleapis.com [none]
+[debug] [2024-11-26T03:38:59.053Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/run.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:38:59.054Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/eventarc.googleapis.com [none]
+[debug] [2024-11-26T03:38:59.054Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/eventarc.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:38:59.055Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/pubsub.googleapis.com [none]
+[debug] [2024-11-26T03:38:59.055Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/pubsub.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:38:59.056Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/storage.googleapis.com [none]
+[debug] [2024-11-26T03:38:59.057Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/storage.googleapis.com x-goog-quota-user=projects/light-pollution-app
+[debug] [2024-11-26T03:38:59.370Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/run.googleapis.com 200
+[debug] [2024-11-26T03:38:59.370Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/run.googleapis.com [omitted]
+[info] +  functions: required API run.googleapis.com is enabled 
+[debug] [2024-11-26T03:38:59.874Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/eventarc.googleapis.com 200
+[debug] [2024-11-26T03:38:59.874Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/eventarc.googleapis.com [omitted]
+[info] +  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2024-11-26T03:38:59.889Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/pubsub.googleapis.com 200
+[debug] [2024-11-26T03:38:59.889Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2024-11-26T03:38:59.924Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/storage.googleapis.com 200
+[debug] [2024-11-26T03:38:59.924Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/light-pollution-app/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2024-11-26T03:38:59.925Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:59.925Z] Checked if tokens are valid: true, expires at: 1732594857857
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2024-11-26T03:38:59.925Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:59.925Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:38:59.926Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/405862272569/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-11-26T03:38:59.926Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/405862272569/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-11-26T03:39:00.389Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/405862272569/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2024-11-26T03:39:00.389Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/405862272569/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-405862272569@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"107298240107554209612"}}
+[debug] [2024-11-26T03:39:00.921Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/405862272569/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2024-11-26T03:39:00.921Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/405862272569/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-405862272569@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"111702665091816647340"}}
+[debug] [2024-11-26T03:39:00.927Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:00.927Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:00.928Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/405862272569:getIamPolicy [none]
+[debug] [2024-11-26T03:39:01.221Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/405862272569:getIamPolicy 200
+[debug] [2024-11-26T03:39:01.222Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/405862272569:getIamPolicy {"version":1,"etag":"BwYnyIsCtLU=","bindings":[{"role":"roles/cloudbuild.builds.builder","members":["serviceAccount:405862272569@cloudbuild.gserviceaccount.com"]},{"role":"roles/cloudbuild.serviceAgent","members":["serviceAccount:service-405862272569@gcp-sa-cloudbuild.iam.gserviceaccount.com"]},{"role":"roles/cloudfunctions.serviceAgent","members":["serviceAccount:service-405862272569@gcf-admin-robot.iam.gserviceaccount.com"]},{"role":"roles/containerregistry.ServiceAgent","members":["serviceAccount:service-405862272569@containerregistry.iam.gserviceaccount.com"]},{"role":"roles/editor","members":["serviceAccount:405862272569-compute@developer.gserviceaccount.com","serviceAccount:405862272569@cloudservices.gserviceaccount.com","serviceAccount:light-pollution-app@appspot.gserviceaccount.com"]},{"role":"roles/eventarc.eventReceiver","members":["serviceAccount:405862272569-compute@developer.gserviceaccount.com"]},{"role":"roles/eventarc.serviceAgent","members":["serviceAccount:service-405862272569@gcp-sa-eventarc.iam.gserviceaccount.com"]},{"role":"roles/firebase.managementServiceAgent","members":["serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com","serviceAccount:service-405862272569@gcp-sa-firebase.iam.gserviceaccount.com"]},{"role":"roles/firebase.sdkAdminServiceAgent","members":["serviceAccount:firebase-adminsdk-l7mqz@light-pollution-app.iam.gserviceaccount.com"]},{"role":"roles/firebasedatabase.admin","members":["serviceAccount:firebase-adminsdk-l7mqz@light-pollution-app.iam.gserviceaccount.com"]},{"role":"roles/firebasemods.serviceAgent","members":["serviceAccount:service-405862272569@gcp-sa-firebasemods.iam.gserviceaccount.com"]},{"role":"roles/iam.serviceAccountTokenCreator","members":["serviceAccount:firebase-adminsdk-l7mqz@light-pollution-app.iam.gserviceaccount.com","serviceAccount:service-405862272569@gcp-sa-pubsub.iam.gserviceaccount.com"]},{"role":"roles/owner","members":["user:maryambhadmus64@gmail.com"]},{"role":"roles/run.invoker","members":["serviceAccount:405862272569-compute@developer.gserviceaccount.com"]},{"role":"roles/run.serviceAgent","members":["serviceAccount:service-405862272569@serverless-robot-prod.iam.gserviceaccount.com"]}]}
+[debug] [2024-11-26T03:39:01.225Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:01.225Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:01.226Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app [none]
+[debug] [2024-11-26T03:39:01.615Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app 200
+[debug] [2024-11-26T03:39:01.616Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/light-pollution-app {"projectNumber":"405862272569","projectId":"light-pollution-app","lifecycleState":"ACTIVE","name":"light pollution app","labels":{"firebase":"enabled"},"createTime":"2024-10-28T16:21:35.213751Z"}
+[debug] [2024-11-26T03:39:01.618Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:01.618Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:01.618Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/light-pollution-app/billingInfo [none]
+[debug] [2024-11-26T03:39:02.315Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/light-pollution-app/billingInfo 200
+[debug] [2024-11-26T03:39:02.316Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/light-pollution-app/billingInfo {"name":"projects/light-pollution-app/billingInfo","projectId":"light-pollution-app","billingAccountName":"billingAccounts/0108AB-89CA52-235143","billingEnabled":true}
+[debug] [2024-11-26T03:39:02.321Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:02.321Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:02.321Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/functions:generateUploadUrl [none]
+[debug] [2024-11-26T03:39:03.937Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/functions:generateUploadUrl 200
+[debug] [2024-11-26T03:39:03.937Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-405862272569.europe-west1.cloudfunctions.appspot.com/413df84e-4f1a-488e-bd7a-dafb41e392c9.zip?GoogleAccessId=service-405862272569@gcf-admin-robot.iam.gserviceaccount.com&Expires=1732594142&Signature=1MZ0oPyJqsYBLGy1BO2Yz%2FmrTUjRRJSLQmXIs6geEEeZrElw7KgIiblqmMhJwbnz951KIDJ4V6Gir2OxTQV03f6RG4sHpOBT3RZveSI0eSx4MyamJRd5VRUfhnVv2YczjKxZmFLyPVapwNzou7dfwy8GY717IMfJq08Ce%2FNZsdF8Vp16Uj3uKQBem4X0P51Z3%2FqoAEw0g3Xm%2BLNIB0V6M%2FIybWrLD%2BaN0URDfUVoz%2FpPDN9BsKZ0YIgCtPf0pLQdQdeK3EV1gXcSG8lVeC9p8mzX%2F7DbOKaZf9OJkQnDyrEsbT5KjAfO5bb1RPikXL23C2V%2Fx%2F7xkgOgdNjulpWp3w%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-405862272569.europe-west1.cloudfunctions.appspot.com","object":"413df84e-4f1a-488e-bd7a-dafb41e392c9.zip"}}
+[debug] [2024-11-26T03:39:03.938Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-405862272569.europe-west1.cloudfunctions.appspot.com/413df84e-4f1a-488e-bd7a-dafb41e392c9.zip GoogleAccessId=service-405862272569%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1732594142&Signature=1MZ0oPyJqsYBLGy1BO2Yz%2FmrTUjRRJSLQmXIs6geEEeZrElw7KgIiblqmMhJwbnz951KIDJ4V6Gir2OxTQV03f6RG4sHpOBT3RZveSI0eSx4MyamJRd5VRUfhnVv2YczjKxZmFLyPVapwNzou7dfwy8GY717IMfJq08Ce%2FNZsdF8Vp16Uj3uKQBem4X0P51Z3%2FqoAEw0g3Xm%2BLNIB0V6M%2FIybWrLD%2BaN0URDfUVoz%2FpPDN9BsKZ0YIgCtPf0pLQdQdeK3EV1gXcSG8lVeC9p8mzX%2F7DbOKaZf9OJkQnDyrEsbT5KjAfO5bb1RPikXL23C2V%2Fx%2F7xkgOgdNjulpWp3w%3D%3D
+[debug] [2024-11-26T03:39:03.938Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-405862272569.europe-west1.cloudfunctions.appspot.com/413df84e-4f1a-488e-bd7a-dafb41e392c9.zip [stream]
+[debug] [2024-11-26T03:39:04.181Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-405862272569.europe-west1.cloudfunctions.appspot.com/413df84e-4f1a-488e-bd7a-dafb41e392c9.zip 200
+[debug] [2024-11-26T03:39:04.181Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-405862272569.europe-west1.cloudfunctions.appspot.com/413df84e-4f1a-488e-bd7a-dafb41e392c9.zip [omitted]
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 18 (2nd Gen) function aggregateSensorData(europe-west1)... 
+[debug] [2024-11-26T03:39:04.186Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:04.186Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:04.186Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/functions functionId=aggregateSensorData
+[debug] [2024-11-26T03:39:04.186Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/functions {"name":"projects/light-pollution-app/locations/europe-west1/functions/aggregateSensorData","buildConfig":{"runtime":"nodejs18","entryPoint":"aggregateSensorData","source":{"storageSource":{"bucket":"gcf-v2-uploads-405862272569.europe-west1.cloudfunctions.appspot.com","object":"413df84e-4f1a-488e-bd7a-dafb41e392c9.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"light-pollution-app\",\"databaseURL\":\"https://light-pollution-app-default-rtdb.europe-west1.firebasedatabase.app\",\"storageBucket\":\"light-pollution-app.firebasestorage.app\"}","GCLOUD_PROJECT":"light-pollution-app","EVENTARC_CLOUD_EVENT_SOURCE":"projects/light-pollution-app/locations/europe-west1/services/aggregateSensorData","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"aggregateSensorData"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"d1c8d6f55be0b784ae484d99186eeb5e7d1e461f"},"eventTrigger":{"eventType":"google.firebase.database.ref.v1.created","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY","eventFilters":[{"attribute":"ref","value":"light_sensor_data/{pushId}","operator":"match-path-pattern"},{"attribute":"instance","value":"*","operator":"match-path-pattern"}],"triggerRegion":"europe-west1"}}
+[debug] [2024-11-26T03:39:08.866Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/functions 200
+[debug] [2024-11-26T03:39:08.866Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/functions {"name":"projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-26T03:39:07.922689374Z","target":"projects/light-pollution-app/locations/europe-west1/functions/aggregateSensorData","verb":"create","cancelRequested":false,"apiVersion":"v2"},"done":false}
+[debug] [2024-11-26T03:39:08.868Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:08.868Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:08.868Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 [none]
+[debug] [2024-11-26T03:39:08.998Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 200
+[debug] [2024-11-26T03:39:08.999Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 {"name":"projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-26T03:39:07.922689374Z","target":"projects/light-pollution-app/locations/europe-west1/functions/aggregateSensorData","verb":"create","cancelRequested":false,"apiVersion":"v2"},"done":false}
+[debug] [2024-11-26T03:39:09.515Z] [create-default-europe-west1-aggregateSensorData] Retrying task index 0
+[debug] [2024-11-26T03:39:09.516Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:09.516Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:09.516Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 [none]
+[debug] [2024-11-26T03:39:09.658Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 200
+[debug] [2024-11-26T03:39:09.659Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 {"name":"projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-26T03:39:07.922689374Z","target":"projects/light-pollution-app/locations/europe-west1/functions/aggregateSensorData","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/light-pollution-app/locations/europe-west1/functions/aggregateSensorData","buildConfig":{"runtime":"nodejs18","entryPoint":"aggregateSensorData","source":{"storageSource":{"bucket":"gcf-v2-sources-405862272569-europe-west1","object":"aggregateSensorData/function-source.zip","generation":"1732592345250888"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/light-pollution-app/serviceAccounts/405862272569-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/light-pollution-app/locations/europe-west1/services/aggregatesensordata","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"light-pollution-app\",\"databaseURL\":\"https://light-pollution-app-default-rtdb.europe-west1.firebasedatabase.app\",\"storageBucket\":\"light-pollution-app.firebasestorage.app\"}","GCLOUD_PROJECT":"light-pollution-app","EVENTARC_CLOUD_EVENT_SOURCE":"projects/light-pollution-app/locations/europe-west1/services/aggregateSensorData","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"aggregateSensorData","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"405862272569-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/light-pollution-app/locations/europe-west1/triggers/aggregatesensordata-079209","triggerRegion":"europe-west1","eventType":"google.firebase.database.ref.v1.created","eventFilters":[{"attribute":"ref","value":"light_sensor_data/{pushId}","operator":"match-path-pattern"},{"attribute":"instance","value":"*","operator":"match-path-pattern"}],"serviceAccountEmail":"405862272569-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"d1c8d6f55be0b784ae484d99186eeb5e7d1e461f"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"},{"name":"TRIGGER","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2024-11-26T03:39:10.665Z] [create-default-europe-west1-aggregateSensorData] Retrying task index 0
+[debug] [2024-11-26T03:39:10.665Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:10.666Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:10.666Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 [none]
+[debug] [2024-11-26T03:39:10.785Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 200
+[debug] [2024-11-26T03:39:10.786Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 {"name":"projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-26T03:39:07.922689374Z","target":"projects/light-pollution-app/locations/europe-west1/functions/aggregateSensorData","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/light-pollution-app/locations/europe-west1/functions/aggregateSensorData","buildConfig":{"runtime":"nodejs18","entryPoint":"aggregateSensorData","source":{"storageSource":{"bucket":"gcf-v2-sources-405862272569-europe-west1","object":"aggregateSensorData/function-source.zip","generation":"1732592345250888"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/light-pollution-app/serviceAccounts/405862272569-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/light-pollution-app/locations/europe-west1/services/aggregatesensordata","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"light-pollution-app\",\"databaseURL\":\"https://light-pollution-app-default-rtdb.europe-west1.firebasedatabase.app\",\"storageBucket\":\"light-pollution-app.firebasestorage.app\"}","GCLOUD_PROJECT":"light-pollution-app","EVENTARC_CLOUD_EVENT_SOURCE":"projects/light-pollution-app/locations/europe-west1/services/aggregateSensorData","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"aggregateSensorData","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"405862272569-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/light-pollution-app/locations/europe-west1/triggers/aggregatesensordata-079209","triggerRegion":"europe-west1","eventType":"google.firebase.database.ref.v1.created","eventFilters":[{"attribute":"ref","value":"light_sensor_data/{pushId}","operator":"match-path-pattern"},{"attribute":"instance","value":"*","operator":"match-path-pattern"}],"serviceAccountEmail":"405862272569-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"d1c8d6f55be0b784ae484d99186eeb5e7d1e461f"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"},{"name":"TRIGGER","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2024-11-26T03:39:12.800Z] [create-default-europe-west1-aggregateSensorData] Retrying task index 0
+[debug] [2024-11-26T03:39:12.801Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:12.802Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:12.802Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 [none]
+[debug] [2024-11-26T03:39:12.937Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 200
+[debug] [2024-11-26T03:39:12.937Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 {"name":"projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-26T03:39:07.922689374Z","target":"projects/light-pollution-app/locations/europe-west1/functions/aggregateSensorData","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/light-pollution-app/locations/europe-west1/functions/aggregateSensorData","buildConfig":{"runtime":"nodejs18","entryPoint":"aggregateSensorData","source":{"storageSource":{"bucket":"gcf-v2-sources-405862272569-europe-west1","object":"aggregateSensorData/function-source.zip","generation":"1732592345250888"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/light-pollution-app/serviceAccounts/405862272569-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/light-pollution-app/locations/europe-west1/services/aggregatesensordata","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"light-pollution-app\",\"databaseURL\":\"https://light-pollution-app-default-rtdb.europe-west1.firebasedatabase.app\",\"storageBucket\":\"light-pollution-app.firebasestorage.app\"}","GCLOUD_PROJECT":"light-pollution-app","EVENTARC_CLOUD_EVENT_SOURCE":"projects/light-pollution-app/locations/europe-west1/services/aggregateSensorData","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"aggregateSensorData","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"405862272569-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/light-pollution-app/locations/europe-west1/triggers/aggregatesensordata-079209","triggerRegion":"europe-west1","eventType":"google.firebase.database.ref.v1.created","eventFilters":[{"attribute":"ref","value":"light_sensor_data/{pushId}","operator":"match-path-pattern"},{"attribute":"instance","value":"*","operator":"match-path-pattern"}],"serviceAccountEmail":"405862272569-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"d1c8d6f55be0b784ae484d99186eeb5e7d1e461f"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"},{"name":"TRIGGER","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2024-11-26T03:39:16.944Z] [create-default-europe-west1-aggregateSensorData] Retrying task index 0
+[debug] [2024-11-26T03:39:16.945Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:16.945Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:16.945Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 [none]
+[debug] [2024-11-26T03:39:17.092Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 200
+[debug] [2024-11-26T03:39:17.093Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 {"name":"projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-26T03:39:07.922689374Z","target":"projects/light-pollution-app/locations/europe-west1/functions/aggregateSensorData","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/light-pollution-app/locations/europe-west1/functions/aggregateSensorData","buildConfig":{"runtime":"nodejs18","entryPoint":"aggregateSensorData","source":{"storageSource":{"bucket":"gcf-v2-sources-405862272569-europe-west1","object":"aggregateSensorData/function-source.zip","generation":"1732592345250888"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/light-pollution-app/serviceAccounts/405862272569-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/light-pollution-app/locations/europe-west1/services/aggregatesensordata","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"light-pollution-app\",\"databaseURL\":\"https://light-pollution-app-default-rtdb.europe-west1.firebasedatabase.app\",\"storageBucket\":\"light-pollution-app.firebasestorage.app\"}","GCLOUD_PROJECT":"light-pollution-app","EVENTARC_CLOUD_EVENT_SOURCE":"projects/light-pollution-app/locations/europe-west1/services/aggregateSensorData","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"aggregateSensorData","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"405862272569-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/light-pollution-app/locations/europe-west1/triggers/aggregatesensordata-079209","triggerRegion":"europe-west1","eventType":"google.firebase.database.ref.v1.created","eventFilters":[{"attribute":"ref","value":"light_sensor_data/{pushId}","operator":"match-path-pattern"},{"attribute":"instance","value":"*","operator":"match-path-pattern"}],"serviceAccountEmail":"405862272569-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"d1c8d6f55be0b784ae484d99186eeb5e7d1e461f"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"},{"name":"TRIGGER","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2024-11-26T03:39:25.108Z] [create-default-europe-west1-aggregateSensorData] Retrying task index 0
+[debug] [2024-11-26T03:39:25.108Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:25.108Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:25.109Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 [none]
+[debug] [2024-11-26T03:39:25.256Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 200
+[debug] [2024-11-26T03:39:25.256Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 {"name":"projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-26T03:39:07.922689374Z","target":"projects/light-pollution-app/locations/europe-west1/functions/aggregateSensorData","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/light-pollution-app/locations/europe-west1/functions/aggregateSensorData","buildConfig":{"runtime":"nodejs18","entryPoint":"aggregateSensorData","source":{"storageSource":{"bucket":"gcf-v2-sources-405862272569-europe-west1","object":"aggregateSensorData/function-source.zip","generation":"1732592345250888"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/light-pollution-app/serviceAccounts/405862272569-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/light-pollution-app/locations/europe-west1/services/aggregatesensordata","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"light-pollution-app\",\"databaseURL\":\"https://light-pollution-app-default-rtdb.europe-west1.firebasedatabase.app\",\"storageBucket\":\"light-pollution-app.firebasestorage.app\"}","GCLOUD_PROJECT":"light-pollution-app","EVENTARC_CLOUD_EVENT_SOURCE":"projects/light-pollution-app/locations/europe-west1/services/aggregateSensorData","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"aggregateSensorData","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"405862272569-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/light-pollution-app/locations/europe-west1/triggers/aggregatesensordata-079209","triggerRegion":"europe-west1","eventType":"google.firebase.database.ref.v1.created","eventFilters":[{"attribute":"ref","value":"light_sensor_data/{pushId}","operator":"match-path-pattern"},{"attribute":"instance","value":"*","operator":"match-path-pattern"}],"serviceAccountEmail":"405862272569-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"d1c8d6f55be0b784ae484d99186eeb5e7d1e461f"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/405862272569/locations/europe-west1/builds/d0155760-a036-4362-8c0b-9c583e5dfe52","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=europe-west1/d0155760-a036-4362-8c0b-9c583e5dfe52?project=405862272569"},{"name":"SERVICE","state":"NOT_STARTED"},{"name":"TRIGGER","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/405862272569/locations/europe-west1/builds/d0155760-a036-4362-8c0b-9c583e5dfe52"},"done":false}
+[debug] [2024-11-26T03:39:35.263Z] [create-default-europe-west1-aggregateSensorData] Retrying task index 0
+[debug] [2024-11-26T03:39:35.263Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:35.264Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:35.264Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 [none]
+[debug] [2024-11-26T03:39:35.390Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 200
+[debug] [2024-11-26T03:39:35.390Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 {"name":"projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-26T03:39:07.922689374Z","target":"projects/light-pollution-app/locations/europe-west1/functions/aggregateSensorData","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/light-pollution-app/locations/europe-west1/functions/aggregateSensorData","buildConfig":{"runtime":"nodejs18","entryPoint":"aggregateSensorData","source":{"storageSource":{"bucket":"gcf-v2-sources-405862272569-europe-west1","object":"aggregateSensorData/function-source.zip","generation":"1732592345250888"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/light-pollution-app/serviceAccounts/405862272569-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/light-pollution-app/locations/europe-west1/services/aggregatesensordata","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"light-pollution-app\",\"databaseURL\":\"https://light-pollution-app-default-rtdb.europe-west1.firebasedatabase.app\",\"storageBucket\":\"light-pollution-app.firebasestorage.app\"}","GCLOUD_PROJECT":"light-pollution-app","EVENTARC_CLOUD_EVENT_SOURCE":"projects/light-pollution-app/locations/europe-west1/services/aggregateSensorData","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"aggregateSensorData","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"405862272569-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/light-pollution-app/locations/europe-west1/triggers/aggregatesensordata-079209","triggerRegion":"europe-west1","eventType":"google.firebase.database.ref.v1.created","eventFilters":[{"attribute":"ref","value":"light_sensor_data/{pushId}","operator":"match-path-pattern"},{"attribute":"instance","value":"*","operator":"match-path-pattern"}],"serviceAccountEmail":"405862272569-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"d1c8d6f55be0b784ae484d99186eeb5e7d1e461f"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/405862272569/locations/europe-west1/builds/d0155760-a036-4362-8c0b-9c583e5dfe52","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=europe-west1/d0155760-a036-4362-8c0b-9c583e5dfe52?project=405862272569"},{"name":"SERVICE","state":"NOT_STARTED"},{"name":"TRIGGER","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/405862272569/locations/europe-west1/builds/d0155760-a036-4362-8c0b-9c583e5dfe52"},"done":false}
+[debug] [2024-11-26T03:39:45.404Z] [create-default-europe-west1-aggregateSensorData] Retrying task index 0
+[debug] [2024-11-26T03:39:45.405Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:45.405Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:45.405Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 [none]
+[debug] [2024-11-26T03:39:45.538Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 200
+[debug] [2024-11-26T03:39:45.539Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 {"name":"projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-26T03:39:07.922689374Z","target":"projects/light-pollution-app/locations/europe-west1/functions/aggregateSensorData","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/light-pollution-app/locations/europe-west1/functions/aggregateSensorData","buildConfig":{"runtime":"nodejs18","entryPoint":"aggregateSensorData","source":{"storageSource":{"bucket":"gcf-v2-sources-405862272569-europe-west1","object":"aggregateSensorData/function-source.zip","generation":"1732592345250888"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/light-pollution-app/serviceAccounts/405862272569-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/light-pollution-app/locations/europe-west1/services/aggregatesensordata","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"light-pollution-app\",\"databaseURL\":\"https://light-pollution-app-default-rtdb.europe-west1.firebasedatabase.app\",\"storageBucket\":\"light-pollution-app.firebasestorage.app\"}","GCLOUD_PROJECT":"light-pollution-app","EVENTARC_CLOUD_EVENT_SOURCE":"projects/light-pollution-app/locations/europe-west1/services/aggregateSensorData","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"aggregateSensorData","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"405862272569-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/light-pollution-app/locations/europe-west1/triggers/aggregatesensordata-079209","triggerRegion":"europe-west1","eventType":"google.firebase.database.ref.v1.created","eventFilters":[{"attribute":"ref","value":"light_sensor_data/{pushId}","operator":"match-path-pattern"},{"attribute":"instance","value":"*","operator":"match-path-pattern"}],"serviceAccountEmail":"405862272569-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"d1c8d6f55be0b784ae484d99186eeb5e7d1e461f"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/405862272569/locations/europe-west1/builds/d0155760-a036-4362-8c0b-9c583e5dfe52","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=europe-west1/d0155760-a036-4362-8c0b-9c583e5dfe52?project=405862272569"},{"name":"SERVICE","state":"NOT_STARTED"},{"name":"TRIGGER","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/405862272569/locations/europe-west1/builds/d0155760-a036-4362-8c0b-9c583e5dfe52"},"done":false}
+[debug] [2024-11-26T03:39:55.548Z] [create-default-europe-west1-aggregateSensorData] Retrying task index 0
+[debug] [2024-11-26T03:39:55.549Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:55.549Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:55.549Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 [none]
+[debug] [2024-11-26T03:39:55.687Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 200
+[debug] [2024-11-26T03:39:55.688Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273 {"name":"projects/light-pollution-app/locations/europe-west1/operations/operation-1732592343437-627c8972bd116-c97f82da-04259273","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-11-26T03:39:07.922689374Z","endTime":"2024-11-26T03:39:49.338356011Z","target":"projects/light-pollution-app/locations/europe-west1/functions/aggregateSensorData","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/light-pollution-app/locations/europe-west1/functions/aggregateSensorData","buildConfig":{"runtime":"nodejs18","entryPoint":"aggregateSensorData","source":{"storageSource":{"bucket":"gcf-v2-sources-405862272569-europe-west1","object":"aggregateSensorData/function-source.zip","generation":"1732592345250888"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/light-pollution-app/serviceAccounts/405862272569-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/light-pollution-app/locations/europe-west1/services/aggregatesensordata","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"light-pollution-app\",\"databaseURL\":\"https://light-pollution-app-default-rtdb.europe-west1.firebasedatabase.app\",\"storageBucket\":\"light-pollution-app.firebasestorage.app\"}","GCLOUD_PROJECT":"light-pollution-app","EVENTARC_CLOUD_EVENT_SOURCE":"projects/light-pollution-app/locations/europe-west1/services/aggregateSensorData","FUNCTION_SIGNATURE_TYPE":"cloudevent","FUNCTION_TARGET":"aggregateSensorData","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"405862272569-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"eventTrigger":{"trigger":"projects/light-pollution-app/locations/europe-west1/triggers/aggregatesensordata-079209","triggerRegion":"europe-west1","eventType":"google.firebase.database.ref.v1.created","eventFilters":[{"attribute":"ref","value":"light_sensor_data/{pushId}","operator":"match-path-pattern"},{"attribute":"instance","value":"*","operator":"match-path-pattern"}],"serviceAccountEmail":"405862272569-compute@developer.gserviceaccount.com","retryPolicy":"RETRY_POLICY_DO_NOT_RETRY"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"d1c8d6f55be0b784ae484d99186eeb5e7d1e461f"},"environment":"GEN_2"},"stages":[{"name":"ARTIFACT_REGISTRY","message":"Deleting function artifacts in Artifact Registry","state":"COMPLETE"},{"name":"SERVICE","message":"Deleting Cloud Run service","state":"COMPLETE","resource":"projects/light-pollution-app/locations/europe-west1/services/aggregatesensordata"},{"name":"TRIGGER","message":"Deleting Eventarc trigger","state":"COMPLETE","resource":"projects/light-pollution-app/locations/europe-west1/triggers/aggregatesensordata-079209"}],"operationType":"CREATE_FUNCTION"},"done":true,"error":{"code":3,"message":"Build failed with status: FAILURE and message: npm error code EUSAGE\nnpm error\nnpm error `npm ci` can only install packages when your package.json and package-lock.json or npm-shrinkwrap.json are in sync. Please update your lock file with `npm install` before continuing.\nnpm error\nnpm error Missing: ngeohash@0.6.3 from lock file\nnpm error\nnpm error Clean install a project\nnpm error\nnpm error Usage:\nnpm error npm ci\nnpm error\nnpm error Options:\nnpm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]\nnpm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]\nnpm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]\nnpm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]\nnpm error [--no-bin-links] [--no-fund] [--dry-run]\nnpm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]\nnpm error [-ws|--workspaces] [--include-workspace-root] [--install-links]\nnpm error\nnpm error aliases: clean-install, ic, install-clean, isntall-clean\nnpm error\nnpm error Run \"npm help ci\" for more info\n\nnpm error A complete log of this run can be found in: /www-data-home/.npm/_logs/2024-11-26T03_39_36_080Z-debug-0.log. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=europe-west1/d0155760-a036-4362-8c0b-9c583e5dfe52?project=405862272569."}}
+[debug] [2024-11-26T03:39:55.688Z] Got source token undefined for region europe-west1
+[error] Build failed with status: FAILURE and message: npm error code EUSAGE
+npm error
+npm error `npm ci` can only install packages when your package.json and package-lock.json or npm-shrinkwrap.json are in sync. Please update your lock file with `npm install` before continuing.
+npm error
+npm error Missing: ngeohash@0.6.3 from lock file
+npm error
+npm error Clean install a project
+npm error
+npm error Usage:
+npm error npm ci
+npm error
+npm error Options:
+npm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]
+npm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]
+npm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]
+npm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]
+npm error [--no-bin-links] [--no-fund] [--dry-run]
+npm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
+npm error [-ws|--workspaces] [--include-workspace-root] [--install-links]
+npm error
+npm error aliases: clean-install, ic, install-clean, isntall-clean
+npm error
+npm error Run "npm help ci" for more info
+
+npm error A complete log of this run can be found in: /www-data-home/.npm/_logs/2024-11-26T03_39_36_080Z-debug-0.log. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=europe-west1/d0155760-a036-4362-8c0b-9c583e5dfe52?project=405862272569.
+[debug] [2024-11-26T03:39:55.698Z] Total Function Deployment time: 51506
+[debug] [2024-11-26T03:39:55.698Z] 1 Functions Deployed
+[debug] [2024-11-26T03:39:55.698Z] 1 Functions Errored
+[debug] [2024-11-26T03:39:55.698Z] 0 Function Deployments Aborted
+[debug] [2024-11-26T03:39:55.698Z] Average Function Deployment time: 51505
+[info] 
+[info] Functions deploy had errors with the following functions:
+	aggregateSensorData(europe-west1)
+[info] i  functions: cleaning up build files... 
+[debug] [2024-11-26T03:39:55.785Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:55.785Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:55.785Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:55.785Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:55.785Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/light-pollution-app/locations/europe-west1/repositories/gcf-artifacts/packages/aggregate_sensor_data [none]
+[debug] [2024-11-26T03:39:55.786Z] >>> [apiv2][query] GET https://eu.gcr.io/v2/light-pollution-app/gcf/europe-west1/tags/list [none]
+[debug] [2024-11-26T03:39:55.935Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/light-pollution-app/locations/europe-west1/repositories/gcf-artifacts/packages/aggregate_sensor_data 404
+[debug] [2024-11-26T03:39:55.936Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/light-pollution-app/locations/europe-west1/repositories/gcf-artifacts/packages/aggregate_sensor_data {"error":{"code":404,"message":"Package \"projects/light-pollution-app/locations/europe-west1/repositories/gcf-artifacts/packages/aggregate_sensor_data\" was not found.","status":"NOT_FOUND"}}
+[debug] [2024-11-26T03:39:55.962Z] <<< [apiv2][status] GET https://eu.gcr.io/v2/light-pollution-app/gcf/europe-west1/tags/list 404
+[debug] [2024-11-26T03:39:55.962Z] <<< [apiv2][body] GET https://eu.gcr.io/v2/light-pollution-app/gcf/europe-west1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"eu.gcr.io\" not found"}]}
+[debug] [2024-11-26T03:39:55.962Z] Failed docker command with error  Request to https://eu.gcr.io/v2/light-pollution-app/gcf/europe-west1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"eu.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://eu.gcr.io/v2/light-pollution-app/gcf/europe-west1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2024-11-26T03:39:55.966Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:55.967Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:55.967Z] >>> [apiv2][query] GET https://eu.gcr.io/v2/light-pollution-app/gcf/europe-west1/tags/list [none]
+[debug] [2024-11-26T03:39:56.033Z] <<< [apiv2][status] GET https://eu.gcr.io/v2/light-pollution-app/gcf/europe-west1/tags/list 404
+[debug] [2024-11-26T03:39:56.034Z] <<< [apiv2][body] GET https://eu.gcr.io/v2/light-pollution-app/gcf/europe-west1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"eu.gcr.io\" not found"}]}
+[debug] [2024-11-26T03:39:56.034Z] Failed docker command with error  Request to https://eu.gcr.io/v2/light-pollution-app/gcf/europe-west1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"eu.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://eu.gcr.io/v2/light-pollution-app/gcf/europe-west1/tags/list had HTTP Error: 404, Not Found","status":404}
+[debug] [2024-11-26T03:39:56.137Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:56.137Z] Checked if tokens are valid: true, expires at: 1732594857857
+[debug] [2024-11-26T03:39:56.137Z] >>> [apiv2][query] GET https://eu.gcr.io/v2/light-pollution-app/gcf/europe-west1/tags/list [none]
+[debug] [2024-11-26T03:39:56.208Z] <<< [apiv2][status] GET https://eu.gcr.io/v2/light-pollution-app/gcf/europe-west1/tags/list 404
+[debug] [2024-11-26T03:39:56.208Z] <<< [apiv2][body] GET https://eu.gcr.io/v2/light-pollution-app/gcf/europe-west1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"eu.gcr.io\" not found"}]}
+[debug] [2024-11-26T03:39:56.208Z] Failed docker command with error  Request to https://eu.gcr.io/v2/light-pollution-app/gcf/europe-west1/tags/list had HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"eu.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://eu.gcr.io/v2/light-pollution-app/gcf/europe-west1/tags/list had HTTP Error: 404, Not Found","status":404}
+[warn] !  functions: Unhandled error cleaning up build images. This could result in a small monthly bill if not corrected. You can attempt to delete these images by redeploying or you can delete them manually at https://console.cloud.google.com/gcr/images/light-pollution-app/eu/gcf 
+[debug] [2024-11-26T03:39:56.209Z] Functions deploy failed.
+[debug] [2024-11-26T03:39:56.209Z] {
+  "endpoint": {
+    "id": "aggregateSensorData",
+    "project": "light-pollution-app",
+    "region": "europe-west1",
+    "entryPoint": "aggregateSensorData",
+    "platform": "gcfv2",
+    "runtime": "nodejs18",
+    "eventTrigger": {
+      "eventType": "google.firebase.database.ref.v1.created",
+      "retry": false,
+      "eventFilters": {},
+      "eventFilterPathPatterns": {
+        "ref": "light_sensor_data/{pushId}",
+        "instance": "*"
+      },
+      "region": "europe-west1"
+    },
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"light-pollution-app\",\"databaseURL\":\"https://light-pollution-app-default-rtdb.europe-west1.firebasedatabase.app\",\"storageBucket\":\"light-pollution-app.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "light-pollution-app",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/light-pollution-app/locations/europe-west1/services/aggregateSensorData"
+    },
+    "codebase": "default",
+    "cpu": 1,
+    "targetedByOnly": false,
+    "hash": "d1c8d6f55be0b784ae484d99186eeb5e7d1e461f"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "exit": 1,
+    "message": "Build failed with status: FAILURE and message: npm error code EUSAGE\nnpm error\nnpm error `npm ci` can only install packages when your package.json and package-lock.json or npm-shrinkwrap.json are in sync. Please update your lock file with `npm install` before continuing.\nnpm error\nnpm error Missing: ngeohash@0.6.3 from lock file\nnpm error\nnpm error Clean install a project\nnpm error\nnpm error Usage:\nnpm error npm ci\nnpm error\nnpm error Options:\nnpm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]\nnpm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]\nnpm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]\nnpm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]\nnpm error [--no-bin-links] [--no-fund] [--dry-run]\nnpm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]\nnpm error [-ws|--workspaces] [--include-workspace-root] [--install-links]\nnpm error\nnpm error aliases: clean-install, ic, install-clean, isntall-clean\nnpm error\nnpm error Run \"npm help ci\" for more info\n\nnpm error A complete log of this run can be found in: /www-data-home/.npm/_logs/2024-11-26T03_39_36_080Z-debug-0.log. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=europe-west1/d0155760-a036-4362-8c0b-9c583e5dfe52?project=405862272569.",
+    "original": {
+      "code": 3,
+      "message": "Build failed with status: FAILURE and message: npm error code EUSAGE\nnpm error\nnpm error `npm ci` can only install packages when your package.json and package-lock.json or npm-shrinkwrap.json are in sync. Please update your lock file with `npm install` before continuing.\nnpm error\nnpm error Missing: ngeohash@0.6.3 from lock file\nnpm error\nnpm error Clean install a project\nnpm error\nnpm error Usage:\nnpm error npm ci\nnpm error\nnpm error Options:\nnpm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]\nnpm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]\nnpm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]\nnpm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]\nnpm error [--no-bin-links] [--no-fund] [--dry-run]\nnpm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]\nnpm error [-ws|--workspaces] [--include-workspace-root] [--install-links]\nnpm error\nnpm error aliases: clean-install, ic, install-clean, isntall-clean\nnpm error\nnpm error Run \"npm help ci\" for more info\n\nnpm error A complete log of this run can be found in: /www-data-home/.npm/_logs/2024-11-26T03_39_36_080Z-debug-0.log. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=europe-west1/d0155760-a036-4362-8c0b-9c583e5dfe52?project=405862272569."
+    },
+    "status": 3,
+    "code": 3
+  }
+}
+[debug] [2024-11-26T03:39:56.234Z] Error: Failed to create function aggregateSensorData in region europe-west1
+    at C:\Users\Dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:294:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Fabricator.createV2Function (C:\Users\Dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:278:30)
+    at async Fabricator.createEndpoint (C:\Users\Dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:137:13)
+    at async handle (C:\Users\Dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:89:17)
+[error] 
+[error] Error: There was an error deploying functions

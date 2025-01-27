@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Export Data to CSV file"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Explanatory Text -->
+    <TextView
+        android:id="@+id/export_explanation_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This feature allows you to export recorded sensor data to a CSV file for analysis. The data includes:"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- List of Data Types -->
+    <TextView
+        android:id="@+id/data_types_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- Timestamp (date and time)\n- Light level (lux)\n- GPS Coordinates (latitude and longitude)\n- Area Name"
+        android:textSize="14sp"
+        android:layout_marginBottom="50dp"/>
+
+    <!-- Export Button -->
+    <Button
+        android:id="@+id/export_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Export CSV"/>
+
+</LinearLayout>
