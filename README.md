@@ -5,5 +5,5 @@ By collecting data from ambient light sensors and integrating external datasets 
 
 Developed using Android (Kotlin) with Firebase Realtime Database, and integrated with  MPAndroidChart for live dynamic graph and map visualisations.
 
-![Alt text](https://github.com/bhadmusm/) 
+![Alt text](https://github.com/bhadmusm/Light-Pollution-App/blob/master/app_images.jpg) 
 
